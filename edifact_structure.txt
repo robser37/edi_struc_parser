@@ -1,0 +1,67 @@
+0010   UNH Message header                            M   1     
+0020   BGM Beginning of message                      M   1     
+0030   DTM Date/time/period                          M   10    
+0040   FTX Free text                                 C   5     
+
+0050       ----- Segment group 1  ------------------ C   10----------+
+0060   RFF Reference                                 M   1           |
+0070   DTM Date/time/period                          C   1-----------+
+
+0080       ----- Segment group 2  ------------------ C   20----------+
+0090   NAD Name and address                          M   1           |
+0100   LOC Place/location identification             C   10          |
+0110   FTX Free text                                 C   5           |
+                                                                     |
+0120       ----- Segment group 3  ------------------ C   5----------+|
+0130   CTA Contact information                       M   1          ||
+0140   COM Communication contact                     C   5----------++
+
+           DETAIL SECTION
+
+0150       ----- Segment group 4  ------------------ M   9999--------+
+0160   SEQ Sequence details                          M   1           |
+0170   DTM Date/time/period                          C   5           |
+0180   GIR Related identification numbers            C   99          |
+0190   LOC Place/location identification             C   5           |
+                                                                     |
+0200       ----- Segment group 5  ------------------ C   5----------+|
+0210   PAC Package                                   M   1          ||
+                                                                    ||
+0220       ----- Segment group 6  ------------------ C   999-------+||
+0230   PCI Package identification                    M   1         |||
+0240   GIN Goods identity number                     C   10--------++|
+                                                                     |
+0250       ----- Segment group 7  ------------------ C   9999-------+|
+0260   LIN Line item                                 M   1          ||
+0270   PIA Additional product id                     C   10         ||
+0280   IMD Item description                          C   10         ||
+0290   ALI Additional information                    C   5          ||
+0300   GIR Related identification numbers            C   5          ||
+0310   FTX Free text                                 C   5          ||
+0320   PAC Package                                   C   5          ||
+0330   DTM Date/time/period                          C   5          ||
+                                                                    ||
+0340       ----- Segment group 8  ------------------ C   5---------+||
+0350   RFF Reference                                 M   1         |||
+0360   DTM Date/time/period                          C   1---------+||
+                                                                    ||
+0370       ----- Segment group 9  ------------------ C   5---------+||
+0380   TDT Details of transport                      M   1         |||
+0390   TMD Transport movement details                C   1---------+||
+                                                                    ||
+0400       ----- Segment group 10 ------------------ C   5---------+||
+0410   LOC Place/location identification             M   1         |||
+                                                                   |||
+0420       ----- Segment group 11 ------------------ C   5--------+|||
+0430   CTA Contact information                       M   1        ||||
+0440   COM Communication contact                     C   5--------++||
+                                                                    ||
+0450       ----- Segment group 12 ------------------ C   999-------+||
+0460   QTY Quantity                                  M   1         |||
+0470   SCC Scheduling conditions                     C   1         |||
+0480   DTM Date/time/period                          C   2         |||
+                                                                   |||
+0490       ----- Segment group 13 ------------------ C   5--------+|||
+0500   RFF Reference                                 M   1        ||||
+0510   DTM Date/time/period                          C   1--------++++
+0520   UNT Message trailer                           M   1     

@@ -1,0 +1,19 @@
+HEADER SECTION
+
+0010   UNH Message header                            M   1     
+0020   BGM Beginning of message                      M   1     
+0030   DTM Date/time/period                          M   10    
+0040   FTX Free text                                 C   5     
+
+0050       ----- Segment group 1  ------------------ C   10----------+
+0060   RFF Reference                                 M   1           |
+0070   DTM Date/time/period                          C   1-----------+
+
+0080       ----- Segment group 2  ------------------ C   20----------+
+0090   NAD Name and address                          M   1           |
+0100   LOC Place/location identification             C   10          |
+0110   FTX Free text                                 C   5           |
+                                                                     |
+0120       ----- Segment group 3  ------------------ C   5----------+|
+0130   CTA Contact information                       M   1          ||
+0140   COM Communication contact                     C   5----------++
